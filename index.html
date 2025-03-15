@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Автокредит</title>
+        <style> @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap'); </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <section class="top-header">
+                <div class="top-header__L-menu">
+                    <a href="#" class="top-header__L-menu__item top-header__L-menu__item_active">Частным клиентам</a>
+                    <a href="#" class="top-header__L-menu__item">Для бизнеса</a>
+                    <a href="#" class="top-header__L-menu__item">О банке</a>
+                    <a href="#" class="top-header__L-menu__item">Офисы</a>
+                </div>
+                <div class="top-header__R-menu">
+                    <a href="tel:88007755605" class="top-header__R-menu__tel">8 (800) 775-56-06</a>
+                    <a href="#" class="top-header__R-menu__location">Хабаровск</a>
+                    <a href="#" class="top-header__R-menu__language" >English</a>
+                </div>
+            </section>
+            <section class="down-header">
+                <div class="down-header__L-menu">
+                    <a href="#" class="down-header__L-menu__logo"><img src="img/Logo.png" alt="Логотип Солид Банк" width="130px" height="30px"></a>
+                    <a href="#" class="down-header__L-menu__item">Кредиты</a>
+                    <a href="#" class="down-header__L-menu__item">Вклады</a>
+                    <a href="#" class="down-header__L-menu__item">Обмен валют</a>
+                    <a href="#" class="down-header__L-menu__item">Карты</a>
+                    <a href="#" class="down-header__L-menu__item">Ипотека</a>
+                    <a href="#" class="down-header__L-menu__item">Переводы</a>
+                    <a href="#" class="down-header__L-menu__item">Страхование</a>
+                    <a href="#" class="down-header__L-menu__item">Страхование</a>
+                    <button class="down-header__L-menu__button">Сервисы</button>
+                </div>
+                <div class="down-header__R-menu">
+                    <a href="#" class="down-header__R-menu__call">Заказать звонок</a>
+                    <a href="#" class="down-header__R-menu__online-bank">Интернет-банк</a>
+                    <button class="down-header__R-menu__hamburger"></button>
+                </div>
+            </section>
+            <section class="level-header">
+                <div class="level-header__list">
+                    <a href="#" class="level-header__list__item">Кредиты</a>
+                    <a href="#" class="level-header__list__item">Вклады</a>
+                    <a href="#" class="level-header__list__item">Обмен валют</a>
+                    <a href="#" class="level-header__list__item">Карты</a>
+                    <a href="#" class="level-header__list__item">Переводы</a>
+                    <button class="level-header__list__button">Ещё</button>
+                </div>
+                <div class="level-header__last-level">
+                    <a href="tel:88007755605" class="level-header__last-level__call">8 (800) 775-56-06</a>
+                    <a href="#" class="level-header__last-level__online-bank">Интернет-банк</a>
+                </div>
+            </section>
+        </header>
+        <main class="page-main">
+            <section class="banner">
+                <div class="banner--breadcruumb">
+
+                </div>
+                <div class="banner--info">
+                    <h1>Автокредит от 7,5% годовых</h1>
+                    <p>на покупку авто у дилера или частного лица</p>
+                    <a>Оформить</a>
+                </div>
+                <img class="banner--img" src="img/Frame2.png" alt="Автомобиль">
+            </section>
+
+
+            <section class="car-selection">
+                <h2>Выберите себе авто</h2>
+                <button>Свернуть список машин</button>
+                <form action="/submit" method="post">
+                    <label for="car-brand">Марка</label>
+                    <select id="car-brand" name="car-brand" placeholder="Выбрать">
+                        <option value="renault">Renault</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="bmw">BMW</option>
+                        <option value="kia">Kia</option>
+                        <option value="skoda">Škoda</option>
+                        <option value="citroen">Citroën</option>
+                        <option value="mercedes-benz">Mercedes-Benz</option>
+                        <option value="honda">Honda</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="toyota">Toyota</option>
+                    </select>
+                    <label for="car-year">Год</label>
+                    <select id="car-year" name="car-year" placeholder="Выбрать">
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                    </select>
+                    <label for="car-price-min">Цена:</label>
+                    <input type="number" id="car-price-min" name="car-price-min" placeholder="От" min="0">
+                    <input type="number" id="car-price-max" name="car-price-max" placeholder="До" min="0">
+                </form>
+            </section>
+            <section class="car-cards">
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2 class="card__title">Лучшее предложение</h2>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__model">Renault Arkana drive</h3>
+                        <p class="card__description">
+                            Купе-кроссовер Renault ARKANA — автомобиль, созданный с чистого листа. 
+                            В нем все по-новому: от дизайна кузова до эргономики салона. Получилось эмоционально и надежно — оцените сами!
+                        </p>
+                        <p class="card__price">от <span class="card__price-value">1 316 000 ₽</span></p>
+                    </div>
+                    <div class="card__image">
+                        <img src="img/cars/Renault Arkana drive.png" alt="Renault Arkana drive" class="card__img">
+                    </div>
+                    <div class="card__footer">
+                        <a href="#" class="card__link">Подробнее</a>
+                    </div>
+                </div>
+
+
+            </section>
+            <article>
+                Не нашли автомобиль у нас, но нужен автокредит? Перейдите к форме заявки
+            </article>
+
+
+            <section class="general-terms">
+                <h2 class="general-terms__title">Общие условия</h2>
+                <div class="general-terms__list">
+                    <div class="general-terms__item">
+                        <span class="general-terms__name">Срок</span>
+                        <p class="general-terms__value">от 6 мес. до 7 лет.</p>
+                    </div>
+                    <div class="general-terms__item">
+                        <span class="general-terms__name">Сумма</span>
+                        <p class="general-terms__value">от 200 000 до 7 000 000 руб.</p>
+                    </div>
+                    <div class="general-terms__item">
+                        <span class="general-terms__name">Ставка</span>
+                        <p class="general-terms__value">от 22,9 %* годовых для нового авто и для подержанного авто (ПСК 26,51%-30,89%)</p>
+                    </div>
+                    <div class="general-terms__item">
+                        <span class="general-terms__name">Обеспечение</span>
+                        <p class="general-terms__value">1.Залог приобретаемого ТС. 2. Поручительство не менее 1(одного) физического лица, юридического лица для заемщиков мужского пола, одновременно соответствующих трем критериям: 1) возраст до 30 лет; 2) место проживания отлично от места регистрации; 3) не состоит в официальном браке.</p>
+                    </div>
+                </div>
+                <a href="#" class="general-terms__link" target="_blank">Смотреть полные условия кредита</a>
+            </section>
+
+            
+            <section class="faq">
+                <div class="faq__title-wrap">
+                    <img>
+                    <h2 class="faq__title">Часто задаваемые вопросы</h2>
+                </div>
+                <div class="faq__question-list">
+                    <div class="question">
+                        <div class=" question__link">Автокредитование: какой автомобиль считается новым автомобилем, а какой подержанным? </div>
+                        <div class="question__body">тут подразумевается ответ</div>
+                </div>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
