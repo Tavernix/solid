@@ -12,12 +12,12 @@
     <body>
         <header>
             <section class="top-header">
-                <div class="top-header__L-menu">
+                <nav class="top-header__L-menu">
                     <a href="#" class="top-header__L-menu__item top-header__L-menu__item_active">Частным клиентам</a>
                     <a href="#" class="top-header__L-menu__item">Для бизнеса</a>
                     <a href="#" class="top-header__L-menu__item">О банке</a>
                     <a href="#" class="top-header__L-menu__item">Офисы</a>
-                </div>
+                </nav>
                 <div class="top-header__R-menu">
                     <a href="tel:88007755605" class="top-header__R-menu__tel">8 (800) 775-56-06</a>
                     <a href="#" class="top-header__R-menu__location">Хабаровск</a>
@@ -25,7 +25,7 @@
                 </div>
             </section>
             <section class="down-header">
-                <div class="down-header__L-menu">
+                <nav class="down-header__L-menu">
                     <a href="#" class="down-header__L-menu__logo"><img src="img/Logo.png" alt="Логотип Солид Банк" width="130px" height="30px"></a>
                     <a href="#" class="down-header__L-menu__item">Кредиты</a>
                     <a href="#" class="down-header__L-menu__item">Вклады</a>
@@ -36,7 +36,7 @@
                     <a href="#" class="down-header__L-menu__item">Страхование</a>
                     <a href="#" class="down-header__L-menu__item">Страхование</a>
                     <button class="down-header__L-menu__button">Сервисы</button>
-                </div>
+                </nav>
                 <div class="down-header__R-menu">
                     <a href="#" class="down-header__R-menu__call">Заказать звонок</a>
                     <a href="#" class="down-header__R-menu__online-bank">Интернет-банк</a>
@@ -44,33 +44,36 @@
                 </div>
             </section>
             <section class="level-header">
-                <div class="level-header__list">
+                <nav class="level-header__list">
                     <a href="#" class="level-header__list__item">Кредиты</a>
                     <a href="#" class="level-header__list__item">Вклады</a>
                     <a href="#" class="level-header__list__item">Обмен валют</a>
                     <a href="#" class="level-header__list__item">Карты</a>
                     <a href="#" class="level-header__list__item">Переводы</a>
                     <button class="level-header__list__button">Ещё</button>
-                </div>
+                </nav>
                 <div class="level-header__last-level">
                     <a href="tel:88007755605" class="level-header__last-level__call">8 (800) 775-56-06</a>
                     <a href="#" class="level-header__last-level__online-bank">Интернет-банк</a>
                 </div>
             </section>
         </header>
-        <main class="page-main">
+        <main>
             <section class="banner">
-                <div class="banner--breadcruumb">
-
-                </div>
-                <div class="banner--info">
+                <nav class="banner__breadcrumb">
+                    <ul class="banner__breadcrumb__ul">
+                        <li class="banner__breadcrumb__li"><a href="#" class="banner__breadcrumb__a">Главная</a></li>
+                        <li class="banner__breadcrumb__li"><a href="#" class="banner__breadcrumb__a">Кредит</a></li>
+                        <li class="banner__breadcrumb__li"><a href="#" class="banner__breadcrumb__a">Автокредит</a></li>
+                    </ul>
+                </nav>
+                <div class="banner__info">
                     <h1>Автокредит от 7,5% годовых</h1>
                     <p>на покупку авто у дилера или частного лица</p>
-                    <a>Оформить</a>
+                    <a class="banner__info__button">Оформить</a>
                 </div>
-                <img class="banner--img" src="img/Frame2.png" alt="Автомобиль">
+                <img class="banner__img" src="img/Frame2.png" alt="Автомобиль">
             </section>
-
 
             <section class="car-selection">
                 <h2>Выберите себе авто</h2>

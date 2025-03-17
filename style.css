@@ -3,13 +3,14 @@
     --primary-color:#760135;
 
 }
+
 body{
     margin: 0;
     font-family: "IBM Plex Sans", sans-serif;
-
     letter-spacing: 0px;
     font-size: 15px;
     font-weight: 300;
+    letter-spacing: 0;
 }
 button{
     border: none;
@@ -26,15 +27,11 @@ a:hover, button:hover{
 
 
 /* HEADER START */
-header{
-    display: grid;
-    grid: 1fr 1fr;
-}
+
 .top-header{
     padding: 0 60px;
     display: flex;
     justify-content: space-between;
-   /* border-bottom: 2px solid #E0E1E6; -не канает, делаю через after*/
 }
 
 .top-header::after{
@@ -113,12 +110,6 @@ header{
     display: flex;
     justify-content: space-between;
 }
-/*
-.down-header__L-menu{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-}*/
 .down-header__L-menu__logo{
     display: inline-flex;
     vertical-align: middle;    
@@ -179,7 +170,95 @@ header{
 
 .banner{
     background: linear-gradient(264.42deg, #FEE4FF 0%, #EFF9FF 100%);
+    position: relative;
+    height: 380px;
+    overflow: hidden;
 }
+
+.banner__breadcrumb {
+    padding: 0 60px;
+    padding-top: 16px;
+    position: absolute;
+}
+.banner__breadcrumb__ul {
+    display: flex;
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+.banner__breadcrumb__li:not(:last-child){
+    opacity: 50%;
+}
+.banner__breadcrumb__li:not(:last-child)::after {
+    opacity: 50%;
+    content: "";
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background: url('img/icons/chevron_nav.svg') no-repeat center;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+
+.banner__info{
+    position: absolute;
+    padding: 0 60px;
+}
+.banner__info h1{
+    position: relative;
+    font-size: 38px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 112px;
+    z-index: 5;
+}
+.banner__info p{
+    position: relative;
+    font-weight: 400;
+    padding: 0;
+    margin: 16px 0 38px 0;
+    z-index: 5;
+}
+.banner__info__button{
+    position: relative;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 14px 78px;
+    color: white;
+    font-weight: 500;
+    z-index: 5;
+}
+.banner__info .banner__info__button:hover{
+    background-color:white;
+    color: var(--primary-color);
+}
+.banner__img{
+    position: absolute;
+    left: 55%;
+    overflow: hidden;
+    z-index: 4;
+}
+ .banner::before {
+    content: "";
+    position: absolute;
+
+    overflow: hidden;
+} 
+.banner__info::after {
+    content: "";
+    position: absolute;
+    background: rgba(164, 196, 255, 1);
+    filter: blur(100px);
+    border-radius: 50%;
+    width: 113px;
+    height: 143px;
+    top: 72px;
+    left: 589px;
+    overflow: hidden;
+    z-index: 2;
+} 
 
 @media (max-width: 1024px) {
     
@@ -269,16 +348,23 @@ header{
         vertical-align: middle;}
 
     .level-header__last-level{display: none;}
+
+    .banner__breadcrumb, .banner__info{
+        padding: 0 16px;
+        padding-top: 16px;
+    }
+    .banner::before{
+        background-position: left 200px top 0;
+    }
+    .banner__img{
+        left: 50%;
+    }
 }
 
 @media (max-width: 600px) {
     .down-header__R-menu__call, .down-header__R-menu__online-bank{
         display: none;
     }
-
-    .level-header{}
-
-
     .level-header__last-level__call {
         display: inline-block;
         color: #25B456;
@@ -318,4 +404,62 @@ header{
         padding: 16px 0;
         font-weight: 500;
     }
+    .banner{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(264.42deg, #FEE4FF 0%, #EFF9FF 100%);
+    }
+    .banner__info__button{display: none;}
+    .banner h1{
+        margin-top: 16px;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 100%;
+    }
+    .banner p::first-letter {
+        text-transform: uppercase;
+    }
+    .banner::before {
+        height: 450px;
+        background-position: calc(75%) top;
+    }
+    .banner__info{position: relative;}
+    .banner__breadcrumb{position: relative;}
+    .banner__img{
+        display: inline-block;
+        position: relative;
+        left: -40px;
+        align-self: center;
+        justify-self: center;
+    }
+    .banner__info::after {
+        content: "";
+        position: absolute;
+        background: rgba(215, 0, 102, 1);
+        filter: blur(250px);
+        border-radius: 50%;
+        width: 273px;
+        height: 273px;
+        top: 314px;
+        left: 145px;
+        opacity: 0.5;        
+        overflow: hidden;
+        z-index: 2;
+    } 
+    .banner__info::before {
+        content: "";
+        position: absolute;
+        background: rgba(164, 196, 255, 1);
+        filter: blur(250px);
+        border-radius: 50%;
+        width: 273px;
+        height: 273px;
+        top: 314px;
+        left: -75px;
+        opacity: 0.5;     
+        overflow: hidden;
+        z-index: 2;
+    } 
 }
+
