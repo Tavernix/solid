@@ -242,9 +242,15 @@ a:hover, button:hover{
 }
  .banner::before {
     content: "";
+    width: 1500px;
+    height: 1500px;
     position: absolute;
-
+	background: url(img/Group693.png);
     overflow: hidden;
+	transform: rotate(-54.1deg);
+	opacity: 5%;
+	top:-700px;
+	left: 0;
 } 
 .banner__info::after {
     content: "";
@@ -353,9 +359,6 @@ a:hover, button:hover{
         padding: 0 16px;
         padding-top: 16px;
     }
-    .banner::before{
-        background-position: left 200px top 0;
-    }
     .banner__img{
         left: 50%;
     }
@@ -421,8 +424,8 @@ a:hover, button:hover{
         text-transform: uppercase;
     }
     .banner::before {
-        height: 450px;
-        background-position: calc(75%) top;
+	top: -500px;
+	left: -500px;
     }
     .banner__info{position: relative;}
     .banner__breadcrumb{position: relative;}
