@@ -75,39 +75,51 @@
                 <img class="banner__img" src="img/Frame2.png" alt="Автомобиль">
             </section>
 
-            <section class="car-selection">
-                <h2>Выберите себе авто</h2>
-                <button>Свернуть список машин</button>
-                <form action="/submit" method="post">
-                    <label for="car-brand">Марка</label>
-                    <select id="car-brand" name="car-brand" placeholder="Выбрать">
-                        <option value="renault">Renault</option>
-                        <option value="volkswagen">Volkswagen</option>
-                        <option value="bmw">BMW</option>
-                        <option value="kia">Kia</option>
-                        <option value="skoda">Škoda</option>
-                        <option value="citroen">Citroën</option>
-                        <option value="mercedes-benz">Mercedes-Benz</option>
-                        <option value="honda">Honda</option>
-                        <option value="nissan">Nissan</option>
-                        <option value="toyota">Toyota</option>
+
+
+            <section class="selection">
+                <h2 "selection__title">Выберите себе авто</h2>
+                <button class="selection__collapse">Свернуть список машин</button>
+                <form action="/submit" method="post" class="selection__form">
+                    <label for="car-brand" class="selection__label">Марка
+                    <select id="car-brand" name="car-brand" placeholder="Выбрать" class="selection__input">
+                        <option class="selection__option" value="renault">Renault</option>
+                        <option class="selection__option" value="volkswagen">Volkswagen</option>
+                        <option class="selection__option" value="bmw">BMW</option>
+                        <option class="selection__option" value="kia">Kia</option>
+                        <option class="selection__option" value="skoda">Škoda</option>
+                        <option class="selection__option" value="citroen">Citroën</option>
+                        <option class="selection__option" value="mercedes-benz">Mercedes-Benz</option>
+                        <option class="selection__option" value="honda">Honda</option>
+                        <option class="selection__option" value="nissan">Nissan</option>
+                        <option class="selection__option" value="toyota">Toyota</option>
                     </select>
-                    <label for="car-year">Год</label>
-                    <select id="car-year" name="car-year" placeholder="Выбрать">
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
+					</label>
+
+                    <label for="car-year" class="selection__label">Год
+                    <select id="car-year" name="car-year" placeholder="Выбрать" class="selection__input">
+                        <option class="selection__option" value="2023">2023</option>
+                        <option class="selection__option" value="2022">2022</option>
+                        <option class="selection__option" value="2021">2021</option>
+                        <option class="selection__option" value="2020">2020</option>
+                        <option class="selection__option" value="2019">2019</option>
+                        <option class="selection__option" value="2018">2018</option>
+                        <option class="selection__option" value="2017">2017</option>
+                        <option class="selection__option" value="2016">2016</option>
                     </select>
-                    <label for="car-price-min">Цена:</label>
-                    <input type="number" id="car-price-min" name="car-price-min" placeholder="От" min="0">
-                    <input type="number" id="car-price-max" name="car-price-max" placeholder="До" min="0">
+					</label>
+
+                    <label for="car-price-min" class="selection__label">Цена:
+						<div class="selection__price">
+							<input type="number" id="car-price-min" name="car-price-min" placeholder="От" min="0" class="selection__input">
+							<input type="number" id="car-price-max" name="car-price-max" placeholder="До" min="0" class="selection__input">
+						</div>
+					</label>
                 </form>
             </section>
+			
+			
+			
             <section class="car-cards">
 
                 <div class="card">
@@ -135,8 +147,6 @@
             <article>
                 Не нашли автомобиль у нас, но нужен автокредит? Перейдите к форме заявки
             </article>
-
-
             <section class="general-terms">
                 <h2 class="general-terms__title">Общие условия</h2>
                 <div class="general-terms__list">
@@ -159,8 +169,6 @@
                 </div>
                 <a href="#" class="general-terms__link" target="_blank">Смотреть полные условия кредита</a>
             </section>
-
-            
             <section class="faq">
                 <div class="faq__title-wrap">
                     <img>
