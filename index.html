@@ -75,41 +75,37 @@
                 <img class="banner__img" src="img/Frame2.png" alt="Автомобиль">
             </section>
 
-
-
             <section class="selection">
                 <h2 "selection__title">Выберите себе авто</h2>
                 <button class="selection__collapse">Свернуть список машин</button>
                 <form action="/submit" method="post" class="selection__form">
-                    <label for="car-brand" class="selection__label">Марка
-                    <select id="car-brand" name="car-brand" placeholder="Выбрать" class="selection__input">
-                        <option class="selection__option" value="renault">Renault</option>
-                        <option class="selection__option" value="volkswagen">Volkswagen</option>
-                        <option class="selection__option" value="bmw">BMW</option>
-                        <option class="selection__option" value="kia">Kia</option>
-                        <option class="selection__option" value="skoda">Škoda</option>
-                        <option class="selection__option" value="citroen">Citroën</option>
-                        <option class="selection__option" value="mercedes-benz">Mercedes-Benz</option>
-                        <option class="selection__option" value="honda">Honda</option>
-                        <option class="selection__option" value="nissan">Nissan</option>
-                        <option class="selection__option" value="toyota">Toyota</option>
-                    </select>
+                    <label for="car-brand" class="selection__label"><span>Марка</span>
+						<select id="car-brand" name="car-brand" placeholder="Выбрать" class="selection__input">
+							<option class="selection__option" value="renault">Renault</option>
+							<option class="selection__option" value="volkswagen">Volkswagen</option>
+							<option class="selection__option" value="bmw">BMW</option>
+							<option class="selection__option" value="kia">Kia</option>
+							<option class="selection__option" value="skoda">Škoda</option>
+							<option class="selection__option" value="citroen">Citroën</option>
+							<option class="selection__option" value="mercedes-benz">Mercedes-Benz</option>
+							<option class="selection__option" value="honda">Honda</option>
+							<option class="selection__option" value="nissan">Nissan</option>
+							<option class="selection__option" value="toyota">Toyota</option>
+						</select>
 					</label>
-
-                    <label for="car-year" class="selection__label">Год
-                    <select id="car-year" name="car-year" placeholder="Выбрать" class="selection__input">
-                        <option class="selection__option" value="2023">2023</option>
-                        <option class="selection__option" value="2022">2022</option>
-                        <option class="selection__option" value="2021">2021</option>
-                        <option class="selection__option" value="2020">2020</option>
-                        <option class="selection__option" value="2019">2019</option>
-                        <option class="selection__option" value="2018">2018</option>
-                        <option class="selection__option" value="2017">2017</option>
-                        <option class="selection__option" value="2016">2016</option>
-                    </select>
+                    <label for="car-year" class="selection__label"><span>Год</span>
+						<select id="car-year" name="car-year" placeholder="Выбрать" class="selection__input">
+							<option class="selection__option" value="2023">2023</option>
+							<option class="selection__option" value="2022">2022</option>
+							<option class="selection__option" value="2021">2021</option>
+							<option class="selection__option" value="2020">2020</option>
+							<option class="selection__option" value="2019">2019</option>
+							<option class="selection__option" value="2018">2018</option>
+							<option class="selection__option" value="2017">2017</option>
+							<option class="selection__option" value="2016">2016</option>
+						</select>
 					</label>
-
-                    <label for="car-price-min" class="selection__label">Цена:
+                    <label for="car-price-min" class="selection__label"><span>Цена:</span>
 						<div class="selection__price">
 							<input type="number" id="car-price-min" name="car-price-min" placeholder="От" min="0" class="selection__input">
 							<input type="number" id="car-price-max" name="car-price-max" placeholder="До" min="0" class="selection__input">
@@ -118,32 +114,67 @@
                 </form>
             </section>
 			
-			
-			
-            <section class="car-cards">
-
-                <div class="card">
-                    <div class="card__header">
-                        <h2 class="card__title">Лучшее предложение</h2>
-                    </div>
-                    <div class="card__body">
-                        <h3 class="card__model">Renault Arkana drive</h3>
-                        <p class="card__description">
-                            Купе-кроссовер Renault ARKANA — автомобиль, созданный с чистого листа. 
-                            В нем все по-новому: от дизайна кузова до эргономики салона. Получилось эмоционально и надежно — оцените сами!
-                        </p>
-                        <p class="card__price">от <span class="card__price-value">1 316 000 ₽</span></p>
-                    </div>
-                    <div class="card__image">
-                        <img src="img/cars/Renault Arkana drive.png" alt="Renault Arkana drive" class="card__img">
-                    </div>
-                    <div class="card__footer">
-                        <a href="#" class="card__link">Подробнее</a>
-                    </div>
+            <section class="cards">
+                <div class="card-best">
+					<div class="card-best__info">
+						<span class="card-best__best-span">Лучшее предложение</span>
+						<h3 class="card-best__title">Renault Arkana drive</h3>
+						<p class="card-best__description">
+							Купе-кроссовер Renault ARKANA — автомобиль, созданный с чистого листа. 
+							В нем все по-новому: от дизайна кузова до эргономики салона. Получилось эмоционально и надежно — оцените сами!
+						</p>
+						<span class="card-best__price">от 1 316 000 ₽</span>
+						<a class="card-best__more">Подробнее</a>
+					</div>
+					<div class="card-best__img-slide">
+						<button class="card-best__slide-left hidden"></button>
+							<img src="img/cars/Renault Arkana drive.png" alt="Renault Arkana drive" class="card-best__image">
+						<button class="card-best__slide-right"></button>
+					</div>
+				</div>
+				<div class="card-best">
+					<div class="card-best__info">
+						<span class="card-best__best-span">Лучшее предложение</span>
+						<h3 class="card-best__title">Volkswagen Tiguan PA</h3>
+						<p class="card-best__description">
+							Купе-кроссовер Renault ARKANA — автомобиль, созданный с чистого листа. 
+							В нем все по-новому: от дизайна кузова до эргономики салона. Получилось эмоционально и надежно — оцените сами!
+						</p>
+						<span class="card-best__price">от 1 316 000 ₽</span>
+						<a class="card-best__more">Подробнее</a>
+					</div>
+					<div class="card-best__img-slide">
+						<button class="card-best__slide-left hidden"></button>
+							<img src="img/cars/Volkswagen Tiguan PA.png" alt="Renault Arkana drive" class="card-best__image">
+						<button class="card-best__slide-right"></button>
+					</div>
+				</div>
+				<div class="card-best">
+					<div class="card-best__info">
+						<span class="card-best__best-span">Лучшее предложение</span>
+						<h3 class="card-best__title">BMW X7</h3>
+						<p class="card-best__description">
+							Купе-кроссовер Renault ARKANA — автомобиль, созданный с чистого листа. 
+							В нем все по-новому: от дизайна кузова до эргономики салона. Получилось эмоционально и надежно — оцените сами!
+						</p>
+						<span class="card-best__price">от 1 316 000 ₽</span>
+						<a class="card-best__more">Подробнее</a>
+					</div>
+					<div class="card-best__img-slide">
+						<button class="card-best__slide-left hidden"></button>
+							<img src="img/cars/BMW X7.png" alt="Renault Arkana drive" class="card-best__image">
+						<button class="card-best__slide-right"></button>
+					</div>
+				</div>
+				<div class="card-min">
+				
                 </div>
-
-
+				
             </section>
+			
+			
+			
+			
             <article>
                 Не нашли автомобиль у нас, но нужен автокредит? Перейдите к форме заявки
             </article>
