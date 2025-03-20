@@ -167,8 +167,10 @@ a:hover, button:hover{
 .down-header__R-menu__hamburger{
     display: none;
 }
+
 /* HEADER END */
 /* BANNER START */
+
 .banner{
     background: linear-gradient(264.42deg, #FEE4FF 0%, #EFF9FF 100%);
     position: relative;
@@ -264,6 +266,7 @@ a:hover, button:hover{
     overflow: hidden;
     z-index: 2;
 } 
+
 /* BANNER END */
 /* SELECTION START */
 
@@ -346,16 +349,14 @@ a:hover, button:hover{
 }
 .selection__option{}
 
-
 /* SELECTION END */
 /* CARDS START */
-
 
 .cards{
 	display: flex;
 	flex-wrap: wrap;
 	background-color: #F7F9FA;
-	padding: 0 173px 24px 173px;
+	padding: 0 157px 24px 173px;
 }
 
 .card-best{
@@ -363,6 +364,7 @@ a:hover, button:hover{
 	display: flex;
 	border-radius: 16px;
 	margin-bottom: 16px;
+	margin-right: 16px;
 }
 .card-best__info{
 	margin: 40px;
@@ -452,6 +454,60 @@ a:hover, button:hover{
     background: url('img/icons/arrow.svg') no-repeat center;
     margin-left: 8px;
     vertical-align: middle;
+}
+.card-min {
+	background: white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 16px;
+	margin-bottom: 16px;
+	margin-right: 16px;
+	padding: 16px;
+	max-height: 336px;
+}
+.card-min__image{
+	overflow: hidden;
+	border-radius: 16px;
+	height: 200px;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	object-fit: cover;
+}
+.card-min__info{
+	display: grid;
+	grid-template-areas: 
+		"title title"
+        "city city"
+        "price more";
+}
+.card-min__title{
+	grid-area: title;
+	font-weight: 500;
+	font-size: 17px;
+	margin-top: 16px;
+}
+.card-min__city{
+	grid-area: city;
+	font-weight: 400;
+	font-size: 15px;
+	color: #282828;
+	margin-top: 16px;
+}
+.card-min__price{
+	grid-area: price;
+	font-weight: 500;
+	font-size: 17px;
+	color:var(--primary-color);
+	margin-top: 8px;
+}
+.card-min__more{
+	grid-area: more;
+	font-weight: 400;
+	font-size: 15px;
+	color: #282828;
+	justify-self: end;
+	align-self: end;
 }
 
 
@@ -560,7 +616,7 @@ a:hover, button:hover{
 		width: 16px; 
 	}
 	.cards{
-		padding: 0 16px 24px 16px;
+		padding: 0 0 24px 16px;
 	}
 	.card-best{
 		justify-content: space-between;
@@ -706,7 +762,7 @@ a:hover, button:hover{
 		margin-top: 24px;
 	}
 	.selection__form{
-			display: flex;
+		display: flex;
 		flex-wrap: wrap;
 		justify-content:space-between;
 	}
@@ -721,11 +777,8 @@ a:hover, button:hover{
 	.selection__price .selection__input {margin: 0; }
 	
 	
-	
-	
 	.card-best{
 		flex-direction: column;
-
 	}
 	.card-best__info {
 		margin: 10px 24px 10px 24px;
@@ -741,14 +794,12 @@ a:hover, button:hover{
 		justify-content: space-between;
 	}
 	.card-best__image {
-
     width: 100%;
 	height: auto;
     object-fit: cover;
 	}
 	
 
-	
 	
 }
 
