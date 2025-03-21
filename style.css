@@ -10,6 +10,7 @@ body{
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 0;
+	overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6{
 	margin:0;
@@ -27,7 +28,10 @@ a{
 a:hover, button:hover{
     color: var(--primary-color);
 }
-
+main{
+		background-color: #F7F9FA;
+		background-color: red;
+}
 
 
 /* HEADER START */
@@ -70,7 +74,7 @@ a:hover, button:hover{
     height: 20px;
     background-color: #E0E1E6;
 }
-.top-header__L-menu__item_active{
+.top-header__L-menu__item--active{
     border-bottom: 2px solid var(--primary-color);
     font-weight: 500;
     color: black;
@@ -275,7 +279,6 @@ a:hover, button:hover{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:space-between;
-	background-color: #F7F9FA;
 }
 .selection__title{
 	font-weight: 500;
@@ -355,8 +358,7 @@ a:hover, button:hover{
 .cards{
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #F7F9FA;
-	padding: 0 157px 24px 173px;
+	padding: 0 157px 0 173px;
 }
 
 .card-best{
@@ -422,7 +424,7 @@ a:hover, button:hover{
 	width: 4.5vw;
 	height: 100%;
 	background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-
+	border-radius: 16px;
 }
 .card-best__slide-right{
 	width: 42px;
@@ -469,7 +471,7 @@ a:hover, button:hover{
 	overflow: hidden;
 	border-radius: 16px;
 	height: 200px;
-	width: auto;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	object-fit: cover;
@@ -509,6 +511,154 @@ a:hover, button:hover{
 	justify-self: end;
 	align-self: end;
 }
+.card-min__expand{
+	flex-basis: 100%;
+	color: black;
+	background-color: white;
+	font-weight: 500;
+	font-size: 15px;
+	padding-top: 15px;	
+	padding-bottom: 15px;
+	border-radius: 16px;
+		margin-right: 16px;
+}
+.no-car-message{
+	margin-top: 10px;
+	flex-basis: 100%;
+	background-color: white;
+	padding-top: 40px;	
+	padding-bottom: 40px;
+	border-radius: 16px;
+	display: inline-block;
+    text-align: center;
+		margin-right: 16px;
+	}
+.no-car-message span{
+	color: black;
+	font-weight: 400;
+	font-size: 15px;
+	margin: 0;
+}
+.no-car-message a{
+	font-weight: 500;
+    color: var(--primary-color);
+}
+
+
+
+/* CARDS END */
+/* general-terms START */
+
+.general-terms{
+	display: flex;
+	flex-direction: column;
+	margin: 60px 173px 10px 173px;
+	background-color: white;
+	border-radius: 16px;
+	padding: 40px;
+}
+.general-terms__title{
+	font-weight: 600;
+	font-size: 24px;
+    color: var(--primary-color);
+}
+.general-terms__list{
+	display: flex;
+	flex-direction: column;
+	margin: 24px 0;
+}
+.general-terms__item{
+	display: flex;
+	color: #000000;
+	border-bottom: 1px solid #E0E1E6;
+	min-height: 60px;
+	align-items: center;
+}
+.general-terms__name{
+	width: 40%;
+	font-weight: 500;
+	font-size: 15px;
+}
+.general-terms__value{
+	margin: 0;
+	font-weight: 400;
+	font-size: 15px;
+}
+.general-terms__link{
+	align-self: end;
+	font-weight: 500;
+	font-size: 15px;
+    color: var(--primary-color);
+	letter-spacing: 0;
+}
+
+.general-terms__link:after {
+    content: "";
+    display: inline-block;
+    width: 24px; 
+    height: 24px; 
+    background: url('img/icons/chevron_general-terms__link.svg') no-repeat center;
+    margin-left: 16px;
+    vertical-align: middle;
+}
+
+.faq{
+	display: flex;
+	padding: 100px 173px;
+	align-items: center;
+}
+
+.faq__title{
+	display: inline-flex;
+	font-weight: 500;
+	font-size: 24px;
+	color: black;
+	padding-right: 16px;
+	flex-basis: 45%;
+}
+
+.faq__title:before{
+    content: "";
+    display: block;
+    min-width: 45px;
+    min-height: 45px;
+    background: url('img/icons/Question.svg') no-repeat center;
+	margin-right: 16px;
+  }
+.faq__question{
+	background-color: white;
+	border-radius: 16px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 24px;
+}
+.faq__text{
+	margin: 0;
+	font-weight: 400;
+	font-size: 15px;
+	color: black;
+}
+.faq__button{
+	width: 24px;
+	height: 24px;
+	background: url('img/icons/chevron.svg') no-repeat center;
+	transform: rotate(90deg);
+
+}
+
+
+
+
+/* general-terms END */
+
+
+
+
+
+
+
 
 
 
@@ -552,7 +702,7 @@ a:hover, button:hover{
     .top-header__R-menu{
         display: none;
     }
-    .top-header__L-menu__item_active{
+    .top-header__L-menu__item--active{
         line-height: normal;
         border: none;
         color: gray;
@@ -642,7 +792,23 @@ a:hover, button:hover{
 		background: url('img/icons/chevron_slide2.svg') no-repeat center;
 		z-index:2;
 	}
-
+	.general-terms{
+		margin: 40px 16px 73px 16px;
+	}
+	.faq{
+	padding: 63px 16px 100px 16px;
+	flex-direction: column;
+	}
+	.faq__title{
+	flex-basis: 100%;
+	margin-bottom: 24px;
+	align-self: start;
+	align-items: center;
+	}
+	.faq__question{
+		width: 100%;
+	    box-sizing: border-box; 
+	}
 	
 	
 }
@@ -708,8 +874,8 @@ a:hover, button:hover{
         text-transform: uppercase;
     }
     .banner::before {
-	top: -500px;
-	left: -500px;
+		top: -500px;
+		left: -500px;
     }
     .banner__info{position: relative;}
     .banner__breadcrumb{position: relative;}
@@ -798,9 +964,28 @@ a:hover, button:hover{
 	height: auto;
     object-fit: cover;
 	}
-	
+	.no-car-message{
+	padding: 16px;	
+	}
+	.general-terms{
+		margin: 32px 16px 81px 16px;
+		padding: 24px;
+	}
+	.general-terms__item{
+		flex-direction: column;
+		align-items: start;
+		min-height: auto;
+		padding: 20px 0;
+	}
+	.general-terms__name{
+		width: 100%;
+		padding-bottom: 8px;
+	}
+	.general-terms__link{
+		align-self: center;
+		white-space: nowrap;
+	}
 
-	
 }
 
 	
