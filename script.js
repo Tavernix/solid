@@ -11,7 +11,7 @@ for (let i = 0; i < sliders.length; i++) { // на каждый слайдер
 
         function updateSlider() {
             sliderImages.forEach((img, index) => {
-                img.style.left = (50 + (counter - index) * 200) + '%'; // Сдвигаем изображение в зависимости от счетчика: пересчитывает left каждой картинке в слайдере
+                img.style.left = (50 + ( index - counter) * 200) + '%'; // Сдвигаем изображение в зависимости от счетчика: пересчитывает left каждой картинке в слайдере
             });
             btnLeft.classList.toggle('hidden', counter === 0); // Скрываем левую кнопку, если это первое изображение
             btnRight.classList.toggle('hidden', counter === sliderImages.length - 1); // Скрываем правую кнопку, если это последнее изображение
