@@ -367,12 +367,15 @@ main{
 	border-radius: 16px;
 	margin-bottom: 16px;
 	margin-right: 16px;
+	box-sizing: border-box;
+		overflow: hidden;
 }
 .card-best__info{
 	margin: 40px;
 	margin-right: 0;
 	display: flex;
 	flex-direction: column;	
+	flex-basis: 52%;
 }
 .card-best__best-span{
 	color: var(--seccess-color);
@@ -405,26 +408,42 @@ main{
 .card-best__img-slide{
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	position: relative;
+	overflow: hidden;
+	flex-basis: 48%;
+	transition: left 1s ease;
 }
 .card-best__image{
+	display: inline-block;
+	position: absolute;
 	width: 356px;
 	height: 192px;
 	object-fit: contain;
-	overflow: hidden;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: left 1s ease;
 }
+
 .card-best__img-slide::before{
 	content: '';
-	width: 4.5vw;
+	min-width: 4.5vw;
 	height: 100%;
-	background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(90deg, green 0%, rgba(255, 255, 255, 0) 100%);
+	position: relative;
+	z-index: 1;
+		position: absolute;	
+		left: 0;
 }
 .card-best__img-slide::after{
 	content: '';
-	width: 4.5vw;
+	min-width: 4.5vw;
 	height: 100%;
-	background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(270deg, green 0%, rgba(255, 255, 255, 0) 100%);
 	border-radius: 16px;
+	position: absolute;	
+	z-index: 1;
+	right:0;
 }
 .card-best__slide-right{
 	width: 42px;
@@ -775,11 +794,10 @@ main{
 	.card-best__description{ display: none;}
 	.card-best__image{
 		width: 256px;
-		height: 120px;
-		object-fit: cover;
-		transform: scale(1.1);
-
+		height: 150px;
+		object-fit: contain;
 	}
+	
 	.card-best__slide-left{
 		width: 24px;
 		height: 24px;
@@ -958,14 +976,15 @@ main{
 		order: -1;
 		min-width: 100%;
 		justify-content: space-between;
+		min-height: 136px;
 	}
 	.card-best__image {
-    width: 100%;
-	height: auto;
-    object-fit: cover;
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: contain;
 	}
 	.no-car-message{
-	padding: 16px;	
+		padding: 16px;	
 	}
 	.general-terms{
 		margin: 32px 16px 81px 16px;
