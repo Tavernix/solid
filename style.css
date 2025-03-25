@@ -3,7 +3,6 @@
     --primary-color:#760135;
 	--seccess-color:#25B456;
 }
-
 body{
     margin: 0;
     font-family: "IBM Plex Sans", sans-serif;
@@ -29,7 +28,7 @@ a:hover, button:hover{
     color: var(--primary-color);
 }
 main{
-		background-color: #F7F9FA;
+	background-color: #F7F9FA;
 }
 
 
@@ -126,7 +125,7 @@ main{
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0px;
-    padding-right: 16px;
+    padding: 24px 16px 24px 0 ;
     color: #0D0D0D;
 }
 .down-header__L-menu__button:after {
@@ -138,11 +137,14 @@ main{
     margin-left: 8px;
     vertical-align: middle;
 }
-.level-header{display: none;}
+.level-header{
+	display: none;
+	}
 .down-header__R-menu {
     font-weight: 500;
     display: flex;
     align-items: center;
+	 white-space: nowrap;
 }
 .down-header__R-menu__call, .down-header__R-menu__call:hover{
     color: var(--seccess-color);
@@ -172,10 +174,9 @@ main{
 .down-header__R-menu__hamburger{
     display: none;
 }
-
 /* HEADER END */
-/* BANNER START */
 
+/* BANNER START */
 .banner{
     background: linear-gradient(264.42deg, #FEE4FF 0%, #EFF9FF 100%);
     position: relative;
@@ -273,10 +274,9 @@ main{
     overflow: hidden;
     z-index: 2;
 } 
-
 /* BANNER END */
-/* SELECTION START */
 
+/* SELECTION START */
 .selection{
 	padding: 40px 173px 20px 173px;
 	display: flex;
@@ -317,9 +317,7 @@ main{
 	display: flex;
 	flex-direction: column;
 }
-.selection__label span{
-	margin-bottom:8px;
-}
+.selection__label span{	margin-bottom:8px;}
 .selection__label:nth-child(1){ flex: 2; 	margin-left:0;}
 .selection__label:nth-child(2){ flex: 1;}
 .selection__label:nth-child(3){ flex: 2;}
@@ -340,7 +338,8 @@ main{
 }
 .selection__price .selection__input:last-child {
 	margin-left: 20px; 
-	margin-right: 0; }
+	margin-right: 0; 
+	}
 .selection__price:before{
 	content: "";
     display: block;
@@ -352,10 +351,9 @@ main{
     left: 50%;
     transform: translateX(-50%);
 }
-
 /* SELECTION END */
-/* CARDS START */
 
+/* CARDS START */
 .cards{
 	display: flex;
 	flex-wrap: wrap;
@@ -370,6 +368,7 @@ main{
 	margin-right: 16px;
 	box-sizing: border-box;
 	overflow: hidden;
+	flex-basis: 100%;
 }
 .card-best__info{
 	margin: 40px;
@@ -476,6 +475,7 @@ main{
     margin-left: 8px;
     vertical-align: middle;
 }
+
 .card-min {
 	background: white;
 	display: flex;
@@ -484,7 +484,11 @@ main{
 	margin-bottom: 16px;
 	margin-right: 16px;
 	padding: 16px;
-	max-height: 336px;
+	flex-grow: 1;
+	min-width: 300px;
+	max-width: 360px;
+	min-height: 330px;
+	max-height: 340px;
 }
 .card-min__image{
 	border-radius: 16px;
@@ -499,7 +503,6 @@ main{
 .card-min__image:hover{
     transform: scale(1.02);
 }
-
 .card-min__info{
 	display: grid;
 	grid-template-areas: 
@@ -535,6 +538,7 @@ main{
 	justify-self: end;
 	align-self: end;
 }
+
 .card-min__expand{
 	flex-basis: 100%;
 	color: black;
@@ -555,8 +559,8 @@ main{
 	border-radius: 16px;
 	display: inline-block;
     text-align: center;
-		margin-right: 16px;
-	}
+	margin-right: 16px;
+}
 .no-car-message span{
 	color: black;
 	font-weight: 400;
@@ -567,11 +571,9 @@ main{
 	font-weight: 500;
     color: var(--primary-color);
 }
-
-
 /* CARDS END */
-/* general-terms START */
 
+/* general-terms START */
 .general-terms{
 	display: flex;
 	flex-direction: column;
@@ -614,7 +616,6 @@ main{
     color: var(--primary-color);
 	letter-spacing: 0;
 }
-
 .general-terms__link:after {
     content: "";
     display: inline-block;
@@ -630,7 +631,6 @@ main{
 	padding: 100px 173px;
 	align-items: center;
 }
-
 .faq__title{
 	display: inline-flex;
 	font-weight: 500;
@@ -639,7 +639,6 @@ main{
 	padding-right: 16px;
 	flex-basis: 45%;
 }
-
 .faq__title:before{
     content: "";
     display: block;
@@ -669,8 +668,8 @@ main{
 	background: url('img/icons/chevron.svg') no-repeat center;
 }
 /* general-terms END */
-/* FOOTER START */
 
+/* FOOTER START */
 footer{
     padding: 32px 60px;
     display: flex;
@@ -703,6 +702,7 @@ footer{
 .links-column li a:hover{
 	color: var(--primary-color);
 }
+
 .support{
     width: 24%;
     flex-basis: 24%;
@@ -713,6 +713,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     margin-bottom: 60px;
+	white-space: nowrap;
 }
 .support__phone{ 
     display: flex;
@@ -735,6 +736,7 @@ footer{
     height: 46px;
     margin-right: 16px;
 	margin-top: 16px;
+	
 }
 .support__links--Telegram{	background: url('img/icons/Telegram.svg') no-repeat center;}
 .support__links--VK{		background: url('img/icons/VK.svg') no-repeat center;}
@@ -757,6 +759,7 @@ footer{
 .additional-items h3{
     display: none;
 }
+
 .footer-info{
     flex-basis: 100%;
     display: flex;
@@ -765,16 +768,10 @@ footer{
     font-weight: 400;
     font-size: 13px;
 }
-
 .footer-info a {color: rgba(0, 158, 226, 1)}
-
 /* FOOTER END */
 
-@media (max-width: 1440px) {
-	
-}
-@media (max-width: 1024px) {
-    
+@media (max-width: 1024px) { 
     .top-header{
         padding: 0;
     }
@@ -818,7 +815,6 @@ footer{
         border: none;
         color: gray;
     }
-	
     .down-header{
         padding: 0 16px;
     }
@@ -860,8 +856,8 @@ footer{
         margin-left: 8px;
         vertical-align: middle;
 		}
-		
     .level-header__last-level{display: none;}
+	
     .banner__breadcrumb, .banner__info{
         padding: 0 16px;
         padding-top: 16px;
@@ -889,7 +885,6 @@ footer{
 		height: 150px;
 		object-fit: contain;
 	}
-	
 	.card-best__slide-left{
 		width: 24px;
 		height: 24px;
@@ -910,17 +905,16 @@ footer{
 	flex-direction: column;
 	}
 	.faq__title{
-	flex-basis: 100%;
-	margin-bottom: 24px;
-	align-self: start;
-	align-items: center;
+		flex-basis: 100%;
+		margin-bottom: 24px;
+		align-self: start;
+		align-items: center;
 	}
 	.faq__question{
 		width: 100%;
 	    box-sizing: border-box; 
 	}
 	
-
     footer{
         padding: 16px 24px;
     }
@@ -935,11 +929,9 @@ footer{
         justify-content: space-between;
         margin-bottom: 24px;
     }
-
     .support__links a{
         margin: 8px;
     }
-
 
 }
 
@@ -964,7 +956,6 @@ footer{
         display: inline-block;
         color: var(--primary-color);
         margin-left: 16px;
-        
     }
     .level-header__last-level__online-bank::before {
         display: inline-block;
@@ -1000,9 +991,7 @@ footer{
         font-size: 28px;
         line-height: 100%;
     }
-    .banner p::first-letter {
-        text-transform: uppercase;
-    }
+    .banner p::first-letter { text-transform: uppercase;}
     .banner::before {
 		top: -500px;
 		left: -500px;
@@ -1115,9 +1104,8 @@ footer{
 		align-self: center;
 		white-space: nowrap;
 	}
-    .faq{
-        padding-top: 0;
-    }
+    .faq{ padding-top: 0;}
+	
 	footer{
 		flex-direction: column;
         align-items: center;
@@ -1133,8 +1121,8 @@ footer{
     }
 	.additional-items{
 		padding: 0;
-				width: 100%;
-					vertical-align: center;
+		width: 100%;
+		vertical-align: center;
 	}
 	.links-column{
 		width: 100%;
@@ -1150,16 +1138,9 @@ footer{
         font-size: 17px;
         color: #000000;
         text-decoration: none;
-
 		margin: 16px 0;
     }
-    .links-column li{ 
-        display: none; 
-    }
-    .additional-items a {
-        display: none;
-    }
-	
+    .links-column li, .additional-items a{display: none;}
 	.links-column::before, .additional-items::before{
 	content: '';
 	display: inline-block;
@@ -1170,7 +1151,7 @@ footer{
 	height: 24px;
 	background: url('img/icons/chevron.svg') no-repeat center;
 	}
-
+	
 }
 
 .hidden{display: none;}

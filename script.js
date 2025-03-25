@@ -80,7 +80,6 @@ function showAllCards() {
 }
 btnExpand.addEventListener('click', showAllCards);
 
-
 function toggleButton() {
     if (collapseFlag) {
         // Если список свернут
